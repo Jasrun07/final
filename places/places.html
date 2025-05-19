@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tourist Places in Indore</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+      body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #EFEAE3;
+    }
+
+    header {
+      background-color: #FE320A;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h2 {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .map-section {
+      padding: 20px;
+    }
+
+    .places-gallery {
+      padding: 20px;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .place-card {
+      width: 250px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .place-card:hover {
+      transform: scale(1.03);
+    }
+
+    .place-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .place-card h3 {
+      text-align: center;
+      margin: 10px 0;
+      padding: 0 10px;
+    }
+
+    @media (max-width: 600px) {
+      .place-card {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tourist Places in Indore</h1>
+  </header>
+
+  <section class="map-section">
+    <h2>Map View</h2>
+    <iframe
+      src="https://www.google.com/maps/d/u/0/embed?mid=125AdEg4aWOaWnQ3_IaMwmL6S0CoIy3E&ehbc=2E312F"
+      width="100%"
+      height="480"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy">
+    </iframe>
+  </section>
+
+  <section class="places-gallery">
+    <h2>Places Gallery</h2>
+    <div class="gallery">
+      <div class="place-card">
+        <img src="https://www.holidify.com/images/cmsuploads/compressed/3551_20190228103219.jpg" alt="Rajwada Palace">
+        <h3>Rajwada Palace</h3>
+      </div>
+      <div class="place-card">
+        <img src="https://wmf.imgix.net/images/66__dsc4157.jpg?auto=format,compress&fit=max&w=4040" alt="Lal Bagh Palace">
+        <h3>Lal Bagh Palace</h3>
+      </div>
+      <div class="place-card">
+        <img src="https://api-timescontent.timesofindia.com/api/v1/image-path/view/jpg/685002" alt="Kanch Mandir">
+        <h3>Kanch Mandir</h3>
+      </div>
+      <div class="place-card">
+        <img src="https://d2kihw5e8drjh5.cloudfront.net/eyJidWNrZXQiOiJ1dGEtaW1hZ2VzIiwia2V5IjoicGxhY2VfaW1nLzQ5OWYxMjUxNDk5ZTRmMTdhZWE4ZGJmOWJhMTAxYzFiIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjo2NDAsImhlaWdodCI6NjQwLCJmaXQiOiJpbnNpZGUifSwicm90YXRlIjpudWxsLCJ0b0Zvcm1hdCI6ICJ3ZWJwIn19" alt="Patalpani Waterfall">
+        <h3>Patalpani Waterfall</h3>
+      </div>
+      <div class="place-card">
+        <img src="https://d34vm3j4h7f97z.cloudfront.net/original/4X/5/c/7/5c7b7d10e328ce066452f02e37661ea55fa54f37.jpeg" alt="Ralamandal Sanctuary">
+        <h3>Ralamandal Sanctuary</h3>
+      </div>
+      
+      <div style="text-align: center; margin: 40px 0;">
+        <a href="360.html" target="_blank" style="
+          background-color: #4CAF50;
+          color: white;
+          padding: 12px 25px;
+          text-decoration: none;
+          font-size: 18px;
+          border-radius: 8px;
+          font-family: 'Poppins', sans-serif;
+          box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+          transition: background-color 0.3s ease;
+        " onmouseover="this.style.backgroundColor='#45a049'" onmouseout="this.style.backgroundColor='#4CAF50'">
+          Visit Indore in 360°
+        </a>
+      </div>
+      
+      
+    </div>
+  </section>
+</body>
+</html>

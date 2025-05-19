@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Top Restaurants in Indore</title>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <style>
+     body {
+      font-family: Arial, sans-serif;
+      background-color: #EFEAE3;
+      margin: 20px;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      color: #222;
+    }
+    .restaurant {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 15px;
+      margin: 30px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+    .restaurant img {
+      width: 200px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .info {
+      flex: 1;
+    }
+    .restaurant h2 {
+      margin: 0 0 5px;
+      color: #444;
+    }
+    .rating {
+      color: #f39c12;
+    }
+    .comments {
+      margin-top: 5px;
+      font-style: italic;
+    }
+    .map-link {
+      margin-top: 8px;
+      display: inline-block;
+      color: #0077cc;
+      text-decoration: none;
+    }
+    .map-link:hover {
+      text-decoration: underline;
+    }
+    model-viewer {
+      width: 100%;
+      height: 400px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Top Restaurants in Indore 🍽️</h1>
+
+   <!-- 3D Model Section -->
+   <model-viewer 
+   src="Breakfast_Harmony_0505052603_texture.glb" 
+   alt="3D view of a restaurant or landmark"
+   auto-rotate 
+   camera-controls 
+   background-color="#fff">
+ </model-viewer>
+
+  <div class="restaurant">
+    <img src="https://b.zmtcdn.com/data/pictures/9/1401589/b61148eab447055413cdb4e1d6a17e25.jpg?fit=around|750:500&crop=750:500;*,*" alt="O2 Café De La Ville">
+    <div class="info">
+      <h2>1. O2 Café De La Ville</h2>
+      <p class="rating">⭐ 4.5 (Google)</p>
+      <p class="comments">"Amazing ambience and a variety of options. Must try their cold coffee!"</p>
+      <a class="map-link" href="https://www.google.com/maps/place/O2+Cafe+De+La+Ville,+Indore/" target="_blank">📍 View on Google Maps</a>
+    </div>
+  </div>
+
+  <div class="restaurant">
+    <img src="https://b.zmtcdn.com/data/pictures/2/1400172/452161d173818f63ae5a3410003dd7ca.jpg?fit=around|750:500&crop=750:500;*,*" alt="Mediterra">
+    <div class="info">
+      <h2>2. Mediterra – Sayaji Hotel</h2>
+      <p class="rating">⭐ 4.4 (Google)</p>
+      <p class="comments">"A classy rooftop restaurant with a great Mediterranean menu."</p>
+      <a class="map-link" href="https://www.google.com/maps/place/Mediterra+-+Sayaji+Hotel,+Indore/" target="_blank">📍 View on Google Maps</a>
+    </div>
+  </div>
+
+  <div class="restaurant">
+    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/ee/58/13/dinning.jpg?w=900&h=500&s=1" alt="Shreemaya Celebrity">
+    <div class="info">
+      <h2>3. Shreemaya Celebrity</h2>
+      <p class="rating">⭐ 4.6 (Google)</p>
+      <p class="comments">"Perfect for family dinners. Their desserts are excellent!"</p>
+      <a class="map-link" href="https://www.google.com/maps/place/Shreemaya+Celebrity,+Indore/" target="_blank">📍 View on Google Maps</a>
+    </div>
+  </div>
+
+  <div class="restaurant">
+    <img src="https://media-cdn.tripadvisor.com/media/photo-s/0d/f7/3d/4a/mrbeans-entrance.jpg" alt="Mr. Beans Coffee Lounge">
+    <div class="info">
+      <h2>4. Mr. Beans – The Coffee Lounge</h2>
+      <p class="rating">⭐ 4.3 (Google)</p>
+      <p class="comments">"Cool vibes and really good pasta. Great for hanging out!"</p>
+      <a class="map-link" href="https://www.google.com/maps/place/Mr.+Beans+The+Coffee+Lounge,+Indore/" target="_blank">📍 View on Google Maps</a>
+    </div>
+  </div>
+
+</body>
+</html>

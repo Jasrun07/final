@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Top Colleges in Indore</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5dc; /* Beige */
+      color: #333;
+    }
+    header {
+      background-color: #FE320A; /* Orange */
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+    .selector {
+      text-align: center;
+      margin: 30px auto;
+    }
+    select {
+      padding: 10px 15px;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 0 40px 80px; /* Add bottom padding for chatbot button */
+    }
+    .card {
+      background-color: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .card-content {
+      padding: 15px;
+    }
+    .card-content h2 {
+      font-size: 1.2rem;
+      margin: 0 0 10px;
+    }
+    .card-content p {
+      font-size: 0.95rem;
+      margin: 0;
+    }
+    .chatbot-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #FE320A;
+      color: white;
+      border: none;
+      padding: 15px 20px;
+      font-size: 1rem;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: background-color 0.3s ease;
+      z-index: 1000;
+    }
+    .chatbot-button:hover {
+      background-color: #e45800;
+    }
+  </style>
+</head>
+<body>
+
+  <header>Top Colleges in Indore</header>
+
+  <div class="selector">
+    <label for="collegeType">Select College Type: </label>
+    <select id="collegeType" onchange="showColleges()">
+      <option value="">-- Choose --</option>
+      <option value="engineering">Engineering</option>
+      <option value="medical">Medical</option>
+      <option value="management">Management</option>
+    </select>
+  </div>
+
+  <main class="container" id="collegeContainer">
+    <!-- College cards will be inserted here -->
+  </main>
+
+  <!-- Chatbot Button -->
+  <a href="https://zappy-olive.vercel.app/home" target="_blank">
+    <button class="chatbot-button">Chat with us for More details</button>
+  </a>
+
+  <script>
+    const colleges = {
+      engineering: [
+        {
+          name: "IIT Indore",
+          img: "https://images.shiksha.com/mediadata/images/1488192890phpGsZUQl.png",
+          desc: "A premier engineering institute ranked among the top in India."
+        },
+        {
+          name: "SGSITS",
+          img: "https://images.shiksha.com/mediadata/images/1551439733phpzqmCR0.jpeg",
+          desc: "A top autonomous engineering college with strong academics."
+        },
+        {
+          name: "SAGE University",
+          img: "https://sageuniversity.in/assets/images/campus/fblock-new.jpg",
+          desc: "Offers quality engineering programs with modern infrastructure."
+        }
+      ],
+      medical: [
+        {
+          name: "MGM Medical College",
+          img: "https://rmgoe.org/universities/India/image/1735284490_mgm-medical-college-indore.webp",
+          desc: "One of the oldest and most reputed medical colleges in MP."
+        },
+        {
+          name: "Index Medical College",
+          img: "https://indexgroup.co.in/indexmedical/images/index_hospital1.jpg",
+          desc: "A private medical college known for its modern facilities."
+        },
+        {
+          name: "SAGE University",
+          img: "https://sageuniversity.in/assets/images/campus/fblock-new.jpg",
+          desc: "Emerging in medical sciences with a focus on research and care."
+        }
+      ],
+      management: [
+        {
+          name: "IIM Indore",
+          img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZHk8vmH9_2L5_FteCqZB-zE5IyRlNmJplEw&",
+          desc: "One of the top IIMs offering excellent management education."
+        },
+        {
+          name: "IMS DAVV",
+          img: "https://ims.dauniv.ac.in/img/IMS_Building_2004.jpg",
+          desc: "Renowned for MBA and management programs under DAVV University."
+        },
+        {
+          name: "SAGE University",
+          img: "https://sageuniversity.in/assets/images/campus/fblock-new.jpg",
+          desc: "Known for its industry-focused MBA and business programs."
+        }
+      ]
+    };
+
+    function showColleges() {
+      const type = document.getElementById("collegeType").value;
+      const container = document.getElementById("collegeContainer");
+      container.innerHTML = "";
+
+      if (colleges[type]) {
+        colleges[type].forEach(college => {
+          const card = document.createElement("div");
+          card.className = "card";
+          card.innerHTML = `
+            <img src="${college.img}" alt="${college.name}">
+            <div class="card-content">
+              <h2>${college.name}</h2>
+              <p>${college.desc}</p>
+            </div>
+          `;
+          container.appendChild(card);
+        });
+      }
+    }
+  </script>
+
+</body>
+</html>

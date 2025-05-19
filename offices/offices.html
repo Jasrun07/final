@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Indore Police Stations - Modern Black Theme</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* Reset and base */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #000;
+      color: #FE320A;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .container {
+      background: #111;
+      border-radius: 16px;
+      padding: 40px 30px;
+      max-width: 480px;
+      width: 100%;
+      box-shadow:
+        0 0 15px #FE320A88,
+        inset 0 0 10px #FE320A55;
+      border: 2px solid transparent;
+      background-clip: padding-box;
+      position: relative;
+      transition: border 0.4s ease;
+    }
+    .container:hover {
+      border-image: linear-gradient(45deg, #FE320A, #FF6E40) 1;
+    }
+
+    h4 {
+      font-weight: 600;
+      font-size: 1.8rem;
+      margin-bottom: 30px;
+      text-align: center;
+      letter-spacing: 1.1px;
+      text-transform: uppercase;
+      text-shadow: 0 0 5px #FE320A;
+    }
+
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 12px;
+      font-size: 1rem;
+      color: #FE320A;
+      letter-spacing: 0.8px;
+    }
+
+    select {
+      width: 100%;
+      padding: 14px 18px;
+      font-size: 1rem;
+      color: #FE320A;
+      background-color: #222;
+      border: 2px solid #FE320A;
+      border-radius: 12px;
+      appearance: none;
+      outline: none;
+      cursor: pointer;
+      box-shadow: 0 0 10px #FE320A33;
+      transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      background-image: url('data:image/svg+xml;utf8,<svg fill="%23FE320A" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+      background-size: 20px 20px;
+    }
+    select:hover, select:focus {
+      background-color: #FE320A;
+      color: #000;
+      box-shadow: 0 0 20px #FE320AAA;
+    }
+
+    #policeDetails {
+      margin-top: 30px;
+      padding: 25px 20px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #1a0000, #3f0000);
+      box-shadow: 0 0 15px #FE320A99 inset;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      letter-spacing: 0.02em;
+      text-align: center;
+      font-weight: 500;
+      color: #ff6b42;
+      user-select: none;
+      min-height: 90px;
+      transition: all 0.4s ease;
+    }
+
+    strong {
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: #FE320A;
+      text-shadow: 0 0 8px #FE320Acc;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    @media (max-width: 520px) {
+      .container {
+        padding: 30px 20px;
+      }
+      h4 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container" role="main" aria-label="Indore Police Stations">
+    <h4>Indore Police Stations</h4>
+    <label for="areaSelect">Select Area:</label>
+    <select id="areaSelect" onchange="showPoliceDetails()" aria-describedby="policeDetails">
+      <option value="">-- Select Area --</option>
+      <option value="mgroad">MG Road</option>
+      <option value="annapurna">Annapurna</option>
+      <option value="aerodrum">Aerodrum</option>
+      <option value="bhanwarkuan">Bhanwarkuan</option>
+      <option value="sarafa">Sarafa</option>
+      <option value="sadarbazar">Sadar Bazar</option>
+      <option value="pardesipura">Pardesipura</option>
+      <option value="rajendranagar">Rajendra Nagar</option>
+      <option value="lasudia">Lasudia</option>
+      <option value="khajrana">Khajrana</option>
+    </select>
+
+    <div id="policeDetails" tabindex="0" aria-live="polite" aria-atomic="true"></div>
+  </div>
+
+  <script>
+    const policeStations = {
+      mgroad: {
+        name: "MG Road Police Station",
+        address: "Mrignayani Chouraha, Nagar Nigam Rd, Indore",
+        contact: "+91 70491 08513"
+      },
+      annapurna: {
+        name: "Annapurna Police Station",
+        address: "Annapurna Road, Indore",
+        contact: "2583032, 2449640"
+      },
+      aerodrum: {
+        name: "Aerodrum Police Station",
+        address: "Aerodrum Road, Indore",
+        contact: "2620100, 2419512"
+      },
+      bhanwarkuan: {
+        name: "Bhanwarkuan Police Station",
+        address: "Bhanwarkuan Main Rd, Indore",
+        contact: "2449948, 2449949"
+      },
+      sarafa: {
+        name: "Sarafa Police Station",
+        address: "Sarafa Bazaar, Indore",
+        contact: "2541156, 2549830"
+      },
+      sadarbazar: {
+        name: "Sadar Bazar Police Station",
+        address: "Sadar Bazar, Indore",
+        contact: "2542100, 2549835"
+      },
+      pardesipura: {
+        name: "Pardesipura Police Station",
+        address: "Pardesipura Main Rd, Indore",
+        contact: "2434100, 2549818"
+      },
+      rajendranagar: {
+        name: "Rajendra Nagar Police Station",
+        address: "Rajendra Nagar, Indore",
+        contact: "2321835, 2321825"
+      },
+      lasudia: {
+        name: "Lasudia Police Station",
+        address: "Lasudia Mori, Indore",
+        contact: "5021950, 2802999"
+      },
+      khajrana: {
+        name: "Khajrana Police Station",
+        address: "Khajrana, Indore",
+        contact: "2591475, 2591476"
+      }
+    };
+
+    function showPoliceDetails() {
+      const area = document.getElementById("areaSelect").value;
+      const output = document.getElementById("policeDetails");
+
+      if (area && policeStations[area]) {
+        const station = policeStations[area];
+        output.innerHTML = `
+          <strong>${station.name}</strong>
+          <span>Address: ${station.address}</span><br />
+          <span>Contact: ${station.contact}</span>
+        `;
+      } else {
+        output.innerHTML = "";
+      }
+    }
+  </script>
+</body>
+</html>

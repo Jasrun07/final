@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Top Hospitals in Indore</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f8f8;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #FE320A;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .hospital-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .hospital-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 300px;
+      margin: 15px;
+      overflow: hidden;
+    }
+
+    .hospital-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .hospital-info {
+      padding: 15px;
+    }
+
+    .hospital-info h3 {
+      margin-top: 0;
+    }
+
+    .hospital-info p {
+      margin: 5px 0;
+    }
+
+    .map-link {
+      color: #6200ea;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .map-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Zappy Button Styles */
+    .zappy-button-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .zappy-button {
+      position: relative;
+      display: inline-block;
+      padding: 15px 30px;
+      font-size: 18px;
+      font-weight: bold;
+      color: rgb(242, 133, 30);
+      text-transform: uppercase;
+      text-decoration: none;
+      background: #111;
+      border: 2px solid #0ff;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: 0.4s ease-in-out;
+      box-shadow: 0 0 15px rgba(5, 5, 5, 0.5);
+      z-index: 1;
+    }
+
+    .zappy-button:hover {
+      color: #111;
+      background: rgb(244, 96, 22);
+      box-shadow: 0 0 25px rgb(240, 241, 241), 0 0 40px rgb(251, 255, 255);
+    }
+
+    .zappy-button::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg, transparent, rgba(0, 255, 255, 0.2), transparent);
+      animation: rotate 3s linear infinite;
+      z-index: 0;
+    }
+
+    @keyframes rotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @media (max-width: 600px) {
+      .hospital-card {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Top Hospitals in Indore</h1>
+    <p>Find the best healthcare facilities in the city</p>
+  </header>
+
+  <div class="hospital-container">
+    <!-- Hospital 1 -->
+    <div class="hospital-card">
+      <img src="https://www.bombayhospitalindore.com/resources/assets/images/mumbai.jpg" alt="Bombay Hospital Indore">
+      <div class="hospital-info">
+        <h3>Bombay Hospital</h3>
+        <p>📞 0731-4771111</p>
+        <a class="map-link" href="https://goo.gl/maps/YiknNs5WyGC2" target="_blank">📍 View on Map</a>
+      </div>
+    </div>
+
+    <!-- Hospital 2 -->
+    <div class="hospital-card">
+      <img src="https://cdn.hexahealth.com/Image/6f123a81-3329-4ced-969c-3fa69337263f.jpg" alt="Medanta Hospital Indore">
+      <div class="hospital-info">
+        <h3>Medanta Hospital</h3>
+        <p>📞 0731-4747777</p>
+        <a class="map-link" href="https://goo.gl/maps/5QaDpeRE4F1v3WJ47" target="_blank">📍 View on Map</a>
+      </div>
+    </div>
+
+    <!-- Hospital 3 -->
+    <div class="hospital-card">
+      <img src="https://www.carehospitals.com/indore/assets/images/main/building.jpg" alt="CHL Hospital Indore">
+      <div class="hospital-info">
+        <h3>CHL Hospital</h3>
+        <p>📞 0731-4730400</p>
+        <a class="map-link" href="https://goo.gl/maps/JzXs8bka53hujznU7" target="_blank">📍 View on Map</a>
+      </div>
+    </div>
+
+    <!-- Hospital 4 -->
+    <div class="hospital-card">
+      <img src="https://d3lzcn6mbbadaf.cloudfront.net/media/details/ANI-20240531104428.jpg" alt="Apollo Hospital Indore">
+      <div class="hospital-info">
+        <h3>Apollo Hospital</h3>
+        <p>📞 0731-6788888</p>
+        <a class="map-link" href="https://goo.gl/maps/KRJtzr6Hv8dGvCwo9" target="_blank">📍 View on Map</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Zappy Button -->
+  <div class="zappy-button-container">
+    <a class="zappy-button" href="https://zappy-olive.vercel.app/home" target="_blank">
+      🤖 Ask Zappy: Hospitals Near Me
+    </a>
+  </div>
+
+</body>
+</html>
